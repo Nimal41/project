@@ -1,0 +1,20 @@
+body {
+    background-color: #f8f9fa;
+}
+h1 {
+    text-align: center;
+    background-color: rgb(81, 182, 81);
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+}
+.card img {
+    object-fit: cover;
+}
+.card-body {
+    background-color: #5df506;
+}
+.price {
+    color: #2b4c0d;
+    font-weight: bold;
+}
