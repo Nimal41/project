@@ -11,7 +11,7 @@
 <body>
     <div class="main">
         <h1>ATN SPORTS</h1>
-        <form id="loginForm">
+        <form id="loginForm" action="php/login.php" method="POST">
             <label for="first">
                   Username:
             </label>
@@ -29,7 +29,7 @@
                    placeholder="Enter your Password" required>
 
             <div class="wrap">
-                <button type="submit">
+                <button type="submit" name="login">
                     Login
                 </button>
             </div>
@@ -42,6 +42,6 @@
         </p>
     </div>
 
-    <script src="js/login.js"></script>
+    <!-- <script src="js/login.js"></script> -->
 </body>
 </html>
