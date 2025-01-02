@@ -1,118 +1,72 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ProductDetails</title>
+    <link rel="stylesheet" href="css/reg_style.css">
+    
 </head>
 <body>
-    <!-- Add the following to your existing HTML -->
-<!-- Modal for Buy Now -->
- <center>
-<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 style="font-size: 50px;" class="modal-title" id="buyNowModalLabel">Purchase Product</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="main">
+        <h1>ATN SPORTS</h1>
+        <form id="ProductDetails" action="php/register.php" method="post">
+            <label for="Productname">Productname:</label>
+            <input type="text" 
+                   id="Productname"
+                   name="Productname" 
+                   placeholder="Enter your Productname" required>
+            
+            <label for="Price">Price:</label>
+            <input type="number"
+                   id="Price" 
+                   name="Price" 
+                   placeholder="Enter Product Price" required>
+
+            <label for="YourName">YourName:</label>
+            <input type="text"
+                     id="YourName" 
+                     name="YourName" 
+                     placeholder="Enter your Name" required>
+      <label for="YourName">YourName:</label>
+            <input type="text"
+                     id="YourName" 
+                     name="YourName" 
+                     placeholder="Enter your Name" required>
+
+
+                     <label for="Email">Email:</label>
+                     <input type="email"
+                              id="Email" 
+                              name="Email" 
+                              placeholder="Enter your Email" required>
+
+
+                              <label for="Address">ShippingAddress:</label>
+                              <input type="text"
+                                       id="Address" 
+                                       name="Address" 
+                                       placeholder="Enter your Adresss" required>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="wrap">
+                <button type="submit">
+                    Buy
+                </button>
             </div>
-            <div class="modal-body">
-                <form id="buyProductForm">
-                    <div class="mb-3">
-                        <table>
-                            <tr>
-                                <td>
-                        <label for="productName" class="form-label">Product Name</label>
-                        <input type="text" class="form-control" id="productName" readonly>
-                    </div>
-                </td>
-                </tr>
-                          <br>
-
-                          <tr>
-                            <td>
-                    <div class="mb-3">
-                        <label for="productPrice" class="form-label">Price</label>
-                        <input type="text" class="form-control" id="productPrice" readonly>
-                    </div>
-                </td>
-            </tr>
-                      <br>
-
-
-                      <tr>
-                        <td>
-                    <div class="mb-3">
-                        <label for="customerName" class="form-label">Your Name</label>
-                        <input type="text" class="form-control" id="customerName" required>
-                    </div>
-                </td>
-            </tr>
-                      <br>
-
-                      <tr>
-                        <td>
-                    <div class="mb-3">
-                        <label for="customerEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="customerEmail" required>
-                    </div>
-                </td>
-            </tr>
-                      <br>
-
-                      <tr>
-                        <td>
-                    <div class="mb-3">
-                        <label for="customerAddress" class="form-label">Shipping Address</label>
-                        <textarea class="form-control" id="customerAddress" rows="3" required></textarea>
-                    </div>
-                </td>
-            </tr>
-                      <br>
-
-                      <tr>
-                        <td>
-                    <button type="submit" class="btn btn-primary">Confirm Purchase</button>
-                </form>
-            </td>
-        </tr>
-                  <br>
-            </div>
-        </div>
+        </form>
+       
     </div>
-</div>
-</table>
-<script>
-    // Add this script to your existing JS section
-    document.querySelectorAll('.btn.btn-dark').forEach(button => {
-        button.addEventListener('click', function () {
-            const card = this.closest('.card');
-            const productName = card.querySelector('.card-title').innerText;
-            const productPrice = card.querySelector('.price').innerText;
 
-            // Set product details in the modal
-            document.getElementById('productName').value = productName;
-            document.getElementById('productPrice').value = productPrice;
-
-            // Show the modal
-            const buyNowModal = new bootstrap.Modal(document.getElementById('buyNowModal'));
-            buyNowModal.show();
-        });
-    });
-
-    // Handle form submission
-    document.getElementById('buyProductForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const customerName = document.getElementById('customerName').value;
-        const customerEmail = document.getElementById('customerEmail').value;
-        const customerAddress = document.getElementById('customerAddress').value;
-
-        alert(`Thank you for your purchase, ${customerName}!`);
-        // Optionally send the data to the server using AJAX
-    });
-</script>
-</center>
+    
 </body>
 </html>
