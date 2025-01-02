@@ -1,9 +1,9 @@
 <?php
 	require_once 'dbconf.php';
-	function AddData($connect,$Productname,$Price,$Customer,$Customer_name,$Email,$Address){
+	function AddData($connect,$Productname,$Price,$Customer_name,$Email,$Address){
 		try {
            // $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-			$sql = "INSERT INTO orders VALUES('$Productname','$Price','$Customer','$Customer_name','$Email','$Address')";
+			$sql = "INSERT INTO orders (product_name,price,customer_name,email,shipping_address) VALUES('$Productname','$Price','$Customer_name','$Email','$Address')";
 			$result = mysqli_query($connect,$sql);
 			if ($result) {
 				
@@ -25,7 +25,7 @@
         $Address= $_POST['Address'];
 
 
-		AddData($connect,$Productname,$Price,$Customer,$Customer_name,$Email,$Address);
+		AddData($connect,$Productname,$Price,$Customer_name,$Email,$Address);
 	}
 
 	?>
